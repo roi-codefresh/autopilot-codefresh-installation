@@ -38,7 +38,9 @@ spec:
         requeueAfterSeconds: 20
         revision: ""
         template:
-          metadata: {}
+          metadata:
+            labels:
+              codefresh.io/component: 'true'
           spec:
             destination: {}
             project: ""
