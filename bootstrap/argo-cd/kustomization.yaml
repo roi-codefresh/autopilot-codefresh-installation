@@ -15,5 +15,4 @@ kind: Kustomization
 namespace: argocd
 resources:
   - https://raw.githubusercontent.com/codefresh-io/argocd-base/v0.1.10/argo-cd/kustomization.yaml
-  - https://raw.githubusercontent.com/codefresh-io/argocd-base/v0.1.10/applicationset/kustomization.yaml
   - namespace.yaml
