@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+configMapGenerator:
+- behavior: merge
+  literals:
+  - |
+    repository.credentials=- passwordSecret:
+        key: git_token
+        name: autopilot-secret
+      url: https://github.com/noam-codefresh/demo.git
+      usernameSecret:
+        key: git_username
+        name: autopilot-secret
+  name: argocd-cm
+kind: Kustomization
+namespace: argocd
+resources:
+  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.0.2/manifests/install.yaml
+  - https://raw.githubusercontent.com/argoproj-labs/applicationset/v0.1.0/manifests/install.yaml
+  - namespace.yaml

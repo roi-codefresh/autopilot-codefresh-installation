@@ -1,0 +1,1 @@
+{"appName":"rollouts","userGivenName":"rollouts","destNamespace":"rollouts","destServer":"https://kubernetes.default.svc","srcRepoURL":"https://github.com/noam-codefresh/demo.git","srcPath":"kustomize/rollouts/overlays/codefresh","srcTargetRevision":"HEAD"}

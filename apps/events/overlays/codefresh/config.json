@@ -1,0 +1,1 @@
+{"appName":"events","userGivenName":"events","destNamespace":"events","destServer":"https://kubernetes.default.svc","srcRepoURL":"https://github.com/noam-codefresh/demo.git","srcPath":"kustomize/events/overlays/codefresh","srcTargetRevision":"HEAD"}
