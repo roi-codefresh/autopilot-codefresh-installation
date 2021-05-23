@@ -21,7 +21,7 @@ spec:
   project: default
   source:
     path: projects
-    repoURL: https://github.com/noam-codefresh/demo.git
+    repoURL: https://github.com/roi-codefresh/autopilot-codefresh-installation.git
   syncPolicy:
     automated:
       prune: true

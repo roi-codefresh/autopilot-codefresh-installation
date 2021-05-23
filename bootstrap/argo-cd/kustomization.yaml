@@ -6,7 +6,7 @@ configMapGenerator:
     repository.credentials=- passwordSecret:
         key: git_token
         name: autopilot-secret
-      url: https://github.com/noam-codefresh/demo.git
+      url: https://github.com/roi-codefresh/autopilot-codefresh-installation.git
       usernameSecret:
         key: git_username
         name: autopilot-secret
@@ -14,6 +14,6 @@ configMapGenerator:
 kind: Kustomization
 namespace: argocd
 resources:
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.0.2/manifests/install.yaml
-  - https://raw.githubusercontent.com/argoproj-labs/applicationset/v0.1.0/manifests/install.yaml
+  - https://raw.githubusercontent.com/codefresh-io/argocd-base/v0.1.9/argo-cd/kustomization.yaml
+  - https://raw.githubusercontent.com/codefresh-io/argocd-base/v0.1.9/applicationset/kustomization.yaml
   - namespace.yaml
