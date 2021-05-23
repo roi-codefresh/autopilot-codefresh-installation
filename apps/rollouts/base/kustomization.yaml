@@ -1,4 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- github.com/argoproj/argo-rollouts/manifests/cluster-install/?ref=v1.0.0-rc1
+- https://raw.githubusercontent.com/codefresh-io/argocd-base/v0.1.10/argo-rollouts/kustomization.yaml
