@@ -8,10 +8,10 @@ metadata:
     app.kubernetes.io/managed-by: argo-autopilot
     app.kubernetes.io/name: root
   name: root
-  namespace: argocd
+  namespace: codefresh
 spec:
   destination:
-    namespace: argocd
+    namespace: codefresh
     server: https://kubernetes.default.svc
   ignoreDifferences:
   - group: argoproj.io
@@ -21,7 +21,7 @@ spec:
   project: default
   source:
     path: projects
-    repoURL: https://github.com/roi-codefresh/autopilot-codefresh-installation.git
+    repoURL: https://github.com/roi-codefresh/autopilot-codefresh-installation
   syncPolicy:
     automated:
       prune: true

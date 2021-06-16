@@ -1,1 +1,0 @@
-{"appName":"events","userGivenName":"events","destNamespace":"codefresh","destServer":"https://kubernetes.default.svc","srcRepoURL":"https://github.com/roi-codefresh/autopilot-codefresh-installation.git","srcPath":"kustomize/events/overlays/staging","srcTargetRevision":"HEAD"}

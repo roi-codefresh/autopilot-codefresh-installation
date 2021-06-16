@@ -1,0 +1,9 @@
+{
+  "appName": "events",
+  "userGivenName": "events",
+  "destNamespace": "codefresh",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/events/overlays/codefresh",
+  "srcRepoURL": "https://github.com/roi-codefresh/autopilot-codefresh-installation",
+  "srcTargetRevision": ""
+}

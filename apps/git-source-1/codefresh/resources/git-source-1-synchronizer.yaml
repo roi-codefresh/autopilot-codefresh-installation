@@ -2,10 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   creationTimestamp: null
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
   labels:
     app.kubernetes.io/managed-by: argo-autopilot
-    app.kubernetes.io/name: argo-cd
-  name: argo-cd
+    app.kubernetes.io/name: git-source-1-synchronizer
+  name: git-source-1-synchronizer
   namespace: codefresh
 spec:
   destination:
@@ -16,22 +18,13 @@ spec:
     jsonPointers:
     - /status
     kind: Application
-  project: default
+  project: codefresh
   source:
-    path: bootstrap/argo-cd
-    repoURL: https://github.com/roi-codefresh/autopilot-codefresh-installation
+    path: manifests
+    repoURL: https://github.com/roi-codefresh/git-source1
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
     - allowEmpty=true
-status:
-  health: {}
-  summary: {}
-  sync:
-    comparedTo:
-      destination: {}
-      source:
-        repoURL: ""
-    status: ""

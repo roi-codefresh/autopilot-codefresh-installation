@@ -1,0 +1,9 @@
+{
+  "appName": "components-reporter",
+  "userGivenName": "components-reporter",
+  "destNamespace": "codefresh",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/components-reporter/codefresh/resources",
+  "srcRepoURL": "https://github.com/roi-codefresh/autopilot-codefresh-installation",
+  "srcTargetRevision": ""
+}

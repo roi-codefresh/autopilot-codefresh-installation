@@ -1,0 +1,1 @@
+{"appName":"git-source-1","userGivenName":"git-source-1","destNamespace":"codefresh","destServer":"https://kubernetes.default.svc","srcPath":"app/git-source-1/codefresh/resources","srcRepoURL":"https://github.com/roi-codefresh/autopilot-codefresh-installation","srcTargetRevision":""}

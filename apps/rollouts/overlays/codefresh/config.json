@@ -1,0 +1,9 @@
+{
+  "appName": "rollouts",
+  "userGivenName": "rollouts",
+  "destNamespace": "codefresh",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/rollouts/overlays/codefresh",
+  "srcRepoURL": "https://github.com/roi-codefresh/autopilot-codefresh-installation",
+  "srcTargetRevision": ""
+}

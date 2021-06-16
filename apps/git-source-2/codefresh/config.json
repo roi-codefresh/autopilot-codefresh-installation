@@ -1,0 +1,1 @@
+{"appName":"git-source-2","userGivenName":"git-source-2","destNamespace":"codefresh","destServer":"https://kubernetes.default.svc","srcPath":"manifests","srcRepoURL":"https://github.com/roi-codefresh/git-source2.git","srcTargetRevision":""}

@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Sensor
+metadata:
+  creationTimestamp: null
+  name: components-reporter
+  namespace: codefresh
+spec:
+  dependencies:
+  - eventName: components
+    eventSourceName: components-reporter
+    name: components
+  - eventName: runtime
+    eventSourceName: components-reporter
+    name: runtime
+  eventBusName: codefresh-eventbus
+  triggers:
+  - retryStrategy:
+      duration: 0
+      steps: 3
+    template:
+      conditions: components
+      http:
+        headers:
+          Content-Type: application/json
+        method: POST
+        payload:
+        - dest: data.actual
+          src:
+            dataKey: body
+            dependencyName: components
+        secureHeaders:
+        - name: Authorization
+          valueFrom:
+            secretKeyRef:
+              key: token
+              name: codefresh-token
+        url: http://local.codefresh.io/argo/api/events
+      name: http-trigger

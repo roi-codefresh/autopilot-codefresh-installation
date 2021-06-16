@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: EventSource
+metadata:
+  creationTimestamp: null
+  name: components-reporter
+  namespace: codefresh
+spec:
+  eventBusName: codefresh-eventbus
+  resource:
+    components:
+      eventTypes:
+      - ADD
+      - UPDATE
+      - DELETE
+      filter:
+        createdBy: null
+        labels:
+        - key: app.kubernetes.io/instance
+          operation: '=='
+          value: "git-source-1-synchronizer"
+      group: argoproj.io
+      namespace: codefresh
+      resource: "*"
+      version: v1alpha1
+  service:
+    ports:
+    - port: 12000
+      targetPort: 12000
+  template:
+    serviceAccountName: components-reporter-sa
+status: {}
